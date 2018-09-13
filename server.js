@@ -9,7 +9,7 @@ app.get('/express_backend', (req, res) => {
   res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT'});
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
   // Serve static files from the React frontend app
   app.use(express.static(path.join(__dirname, 'client/build')));
 
